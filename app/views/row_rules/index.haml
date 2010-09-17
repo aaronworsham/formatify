@@ -1,0 +1,6 @@
+%p
+  Row Rules
+  = render :partial => "rules/ri", :locals => {:rules => @rrules}
+
+= link_to "Add New Row Rule", new_row_rule_path
+= link_to "Back to Rules", rules_path

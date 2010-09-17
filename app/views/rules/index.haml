@@ -1,0 +1,16 @@
+%p
+  = link_to "Column Rules", column_rules_path
+  = render :partial => "ri", :locals => {:rules => @crules}
+  = link_to "Add New Column Rule", new_column_rule_path
+%p
+  = link_to "Row Rule", row_rules_path
+  = render :partial => "ri", :locals => {:rules => @rrules}
+  = link_to "Add New Row Rule", new_row_rule_path
+
+%p
+  = link_to "Field Rules", field_rules_path
+  = render :partial => "ri", :locals => {:rules => @frules} 
+  = link_to "Add New Field Rule", new_field_rule_path
+
+%p
+  = link_to "Back to Transforms", transforms_path

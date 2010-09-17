@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Transform:</b>
+  <%= @rule.transform.name %>
+</p>
+
+<p>
+  <b>Action:</b>
+  <%= @rule.action.name %>
+</p>
+
+<p>
+  <b>Format:</b>
+  <%= @rule.format.name if @rule.format  %>
+</p>
+
+<p>
+  <b>Before:</b>
+  <%= @rule.before %>
+</p>
+
+<p>
+  <b>After:</b>
+  <%= @rule.after %>
+</p>
+
+<p>
+  <b>Match:</b>
+  <%= @rule.match %>
+</p>
+
+<p>
+  <b>Contain:</b>
+  <%= @rule.contain %>
+</p>
+
+<p>
+  <b>Conditional:</b>
+  <%= @rule.conditional %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @rule.type %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @rule.position %>
+</p>
+
+<p>
+  <b>Column name:</b>
+  <%= @rule.column_name %>
+</p>
+
+<p>
+  <b>When:</b>
+  <%= @rule.when %>
+</p>
+
+
+<%= link_to 'Edit', edit_rule_path(@rule) %> |
+<%= link_to 'Back', rules_path %>

@@ -1,0 +1,6 @@
+%p
+  Column Rules
+  = render :partial => "rules/ri", :locals => {:rules => @crules}
+
+= link_to "Add New Column", new_column_rule_path
+= link_to "Back to Rules", rules_path

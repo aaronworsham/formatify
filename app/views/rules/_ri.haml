@@ -1,0 +1,40 @@
+- if rules.present?
+  %table
+    %tr
+      %th Transform
+      %th Type
+      %th Action
+      %th Format
+      %th Before
+      %th After
+      %th Match
+      %th Contain
+      %th Conditional
+      %th Position
+      %th Column name
+      %th When
+      %th
+      %th
+      %th
+
+
+    = rules.each do |ri|
+      %tr
+        %td="#{ri.transform.name}[#{ri.transform.id}]" if ri.transform 
+        %td=ri.type 
+        %td=ri.action.name if ri.action 
+        %td=ri.format.name if ri.format 
+        %td=ri.before 
+        %td=ri.after 
+        %td=ri.match 
+        %td=ri.contain 
+        %td=ri.conditional 
+        %td=ri.position 
+        %td=ri.column_name 
+        %td=ri.when 
+        %td=link_to 'Show', rule_path(ri) 
+        %td=link_to 'Edit', edit_rule_path(ri)
+        %td=link_to 'Destroy', rule_path(ri), :method => :delete
+- else
+  No Rules
+

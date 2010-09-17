@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  transform_id: 1
+  action_id: 1
+  format_id: 1
+  before: MyString
+  after: MyString
+  match: MyString
+  contain: MyString
+  conditional: MyString
+  type: MyString
+  position: MyString
+  column_name: MyString
+  when: MyString
+
+two:
+  transform_id: 1
+  action_id: 1
+  format_id: 1
+  before: MyString
+  after: MyString
+  match: MyString
+  contain: MyString
+  conditional: MyString
+  type: MyString
+  position: MyString
+  column_name: MyString
+  when: MyString

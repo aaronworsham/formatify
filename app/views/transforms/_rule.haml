@@ -1,0 +1,11 @@
+%tr
+  %td= "#{t.name}[#{t.id}]"
+  %td= rule.class.to_s.slice(0,1).capitalize
+  %td= rule.action.name
+  %td= rule.when
+  %td 
+    = "Before: #{rule.before}" if rule.before.present?
+    = "After: #{rule.after}" if rule.after.present?
+    = "Column Name: #{rule.column_name}" if rule.column_name.present?
+    = "Format: #{rule.format.class} #{rule.format.class}" if rule.format
+  %td=link_to "edit", rule

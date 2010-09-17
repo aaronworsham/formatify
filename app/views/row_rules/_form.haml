@@ -1,0 +1,40 @@
+- form_for(@rule) do |f| 
+  - if @rule.errors.any? 
+    #error_explanation
+      %h2= "#{pluralize(@rule.errors.count, "error")} prohibited this rule from being saved"
+
+      %ul
+        - @rule.errors.full_messages.each do |msg|
+          %li= msg 
+  .field
+    = f.label :transform_id 
+    = f.select :transform_id, Transform.all.collect{|x| [x.name, x.id]} 
+  .field
+    = f.label :action_id 
+    = f.select :action_id, RowAction.all.collect{|x| [x.name, x.id]}
+  .field
+    = f.label :before
+    = f.text_field :before 
+  .field
+    = f.label :after 
+    = f.text_field :after
+  .field
+    = f.label :match
+    = f.text_field :match
+  .field
+    = f.label :contain 
+    = f.text_field :contain
+  .field
+    = f.label :conditional 
+    = f.text_field :conditional
+  .field
+    = f.label :position 
+    = f.text_field :position 
+  .field
+    = f.label :column_name 
+    = f.text_field :column_name 
+  .field
+    = f.label :when 
+    = f.select :when, [["early", "early"],["late","late"]] 
+  .actions
+    = f.submit 

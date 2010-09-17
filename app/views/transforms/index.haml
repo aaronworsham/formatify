@@ -1,0 +1,18 @@
+%h1 Transforms
+%table
+  %tr
+    %th Name
+    %th{:col => 5} Rules
+  %tr
+    %th
+    %th Type
+    %th Action
+    %th When
+    %th Effects
+  - @transforms.each do |t|
+    = render :partial => "rule", :collection => t.column_rules, :locals => {:t => t}
+    = render :partial => "rule", :collection => t.row_rules, :locals => {:t => t}
+    = render :partial => "rule", :collection => t.field_rules, :locals => {:t => t}
+= link_to "Add Column Rule",new_column_rule_path
+= link_to "Add Row Rule", new_row_rule_path
+= link_to "Add Field Rule", new_field_rule_path
